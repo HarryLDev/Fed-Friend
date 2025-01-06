@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint \"functions/**/*\" --config eslint.config.js --fix",
+    "lint": "eslint 'src/**/*.{js,ts}' --config eslint.config.js --fix",
     "predeploy": "npm run lint && npm run build"
   },
   "private": true,
