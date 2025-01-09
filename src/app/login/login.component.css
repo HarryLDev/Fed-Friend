@@ -21,9 +21,9 @@
 
 /* Title styling */
 .title {
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
   text-align: center;
 }
 
@@ -33,24 +33,12 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .button-group button {
-  margin-bottom: 20px; /* Add space between buttons */
+  margin-bottom: 10px; /* Add space between buttons */
 }
 
 
 
-.example-right-align {
-  text-align: right;
-}
-
-input.example-right-align::-webkit-outer-spin-button,
-input.example-right-align::-webkit-inner-spin-button {
-  display: none;
-}
-
-input.example-right-align {
-  -moz-appearance: textfield;
-}

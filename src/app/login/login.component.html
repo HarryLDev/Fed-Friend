@@ -1,32 +1,38 @@
 <div class="form-container">
   <mat-card class="form-card">
     <!-- Title -->
-    <h2 class="title">Fed Friend</h2>
+    <h1 class="title" style="color:black;">Fed Friend</h1>
 
-    <!-- Username Field -->
-    <mat-form-field appearance="fill">
+    <p style="font-weight: bold;">Keep track of your pet's meals.</p>
+
+    <!-- Username -->
+    <mat-form-field style="width: 100%; max-width: 300px;">
       <mat-label>Username</mat-label>
-      <input matInput [(ngModel)]="username" required>
+      <input matInput>
     </mat-form-field>
 
-    
-      <mat-form-field>
-        <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide() ? 'password' : 'text'" />
-        <button
-          mat-icon-button
-          matSuffix
-          (click)="clickEvent($event)"
-          [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide()">
-          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
+    <!-- Password -->
+
+    <mat-form-field style="width: 100%; max-width: 300px;">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hide() ? 'password' : 'text'" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+
 
     <!-- Buttons -->
     <div class="button-group">
-      <button mat-raised-button (click)="login()">Login</button>
-      <button mat-raised-button routerLink="/register">Register</button>
+      <button mat-raised-button (click)="login()" style="width: 100%;">Login</button>
+      <button mat-button routerLink="/register">Create an Account</button>
     </div>
   </mat-card>
 </div>
