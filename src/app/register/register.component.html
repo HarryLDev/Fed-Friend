@@ -1,1 +1,38 @@
-<p>Hello World!</p>
+<div class="form-container">
+  <mat-card class="form-card">
+    <!-- Title -->
+    <h1 class="title" style="color:black;">Fed Friend</h1>
+
+    <p style="font-weight: bold;">Keep track of your pet's meals.</p>
+
+    <!-- Username -->
+    <mat-form-field style="width: 100%; max-width: 300px;">
+      <mat-label>Username</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <!-- Password -->
+
+    <mat-form-field style="width: 100%; max-width: 300px;">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hide() ? 'password' : 'text'" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+
+    <!-- Buttons -->
+    <div class="button-group">
+      <button mat-raised-button routerLink="/register">Create Account</button>
+      <button mat-button routerLink="">Back to Login</button>
+    </div>
+  </mat-card>
+</div>

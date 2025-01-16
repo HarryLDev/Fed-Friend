@@ -16,4 +16,22 @@ import { RouterLink } from '@angular/router';
 })
 export class RegisterComponent {
 
-}
+  regUsername: string = '';
+  regPassword: string = '';
+
+  createAccount(){
+
+  }
+
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
+  }
+
+
+
+
+  }
+
+
